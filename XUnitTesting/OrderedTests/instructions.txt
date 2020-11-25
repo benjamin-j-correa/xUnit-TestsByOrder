@@ -1,0 +1,18 @@
+﻿The main Atribute:
+
+public TestCaseOrdererAttribute(string ordererTypeName, string ordererAssemblyName);
+
+string ordererTypeName => ProjectTestName.FolderName.ClassOrderName
+examples: 
+"Certing.FunctionalTests.OrderingTests.PriorityOrderer"
+"Certing.FunctionalTests.OrderingTests.AlphabeticalOrderer"
+
+string ordererAssemblyName => ProjectTestName
+example:
+"Certing.FunctionalTests"
+
+=============================================EXAMPLES===========================================================
+
+[TestCaseOrderer("Certing.FunctionalTests.OrderingTests.PriorityOrderer", "Certing.FunctionalTests")]
+
+[TestCaseOrderer("Certing.FunctionalTests.OrderingTests.AlphabeticalOrderer", "Certing.FunctionalTests")]
